@@ -2,9 +2,11 @@
 
 @section('content')
     @if(session()->has('loggedInUser'))
-    <section class="section only-desktop">
+    <section class="section animate__animated animate__slideInUp">
         <div class="form-area">
-            <h1 class="form_title text-center">Promosyon Seçimi</h1>
+            <h1 class="form_title text-center">
+                <img src="{{asset('frontend/assets/images/icons/move-small.svg')}}"> Promosyonlar</h1>
+            <p>Talep etmek istediğin promosyonu seç!</p>
             <form action="{{route('create-request')}}" method="post">
                 @csrf
                 <div class="form">
@@ -21,17 +23,19 @@
             </form>
         </div>
     </section>
-    <section class="section only-desktop">
+    <section class="section only-desktop animate__animated animate__shakeY">
         <div class="textbox">
-            <div class="rules-area">
-            <div class="rules-content" style="padding:10px" id="rules">
+            
+            <div class="rules-content" id="rules">
                 
             </div>
-        </div>
+        
         </div>
     </section>
     @foreach($user->active_requests as $active_request)
     <section class="section only-desktop">
+        <h1 class="form_title text-center">
+             Bekleyen Taleplerim</h1>
         <div class="lottery">
             <div class="lottery-col">
                 <div class="lottery__total-prize lottery-col-inner">
@@ -39,7 +43,7 @@
                     <p class="lottery__total-prize__amount">
                         Sıra Numaranız
                     </p>
-                </div>
+                </div> 
             </div>
             <div class="lottery-col">
                 <div class="lottery__total-prize lottery-col-inner">
@@ -173,7 +177,7 @@
               document.getElementById('rules').innerHTML = type.rules;
               document.getElementById('promotion_code').innerHTML = '';
               if(type.code_required){
-                document.getElementById('promotion_code').innerHTML = `Kupon Kodu:<input type="text" name="promotion_code">`;
+                document.getElementById('promotion_code').innerHTML = `<p>Kupon kodunuzu kutucuğa ekleyiniz.</p><input type="text" class="form__input" name="promotion_code" placeholder="Kupon Kodunuzu Yazınız">`;
               }
           })
       </script>

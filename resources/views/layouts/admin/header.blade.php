@@ -6,7 +6,7 @@
 <!-- begin #page-container -->
 <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
 <!-- begin #header -->
-<div id="header" class="header navbar-default">
+<div id="header" class="header navbar-default" style="background: #000;border-bottom:3px solid #ffbc00">
   <!-- begin navbar-header -->
   <div class="navbar-header">
     <a href="" class="navbar-brand">
@@ -26,10 +26,10 @@
     <li class="dropdown navbar-user">
       <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
         <img src="{{ asset('admin/assets/img/user/user-13.jpg') }}" alt="" />
-        <span class="d-none d-md-inline">{{auth()->user()->name}}</span> <b class="caret"></b>
+        <span class="d-none d-md-inline text-white">{{auth()->user()->name}}</span> <b class="caret text-white"></b>
       </a>
       <div class="dropdown-menu dropdown-menu-right">
-        <a href="{{route('logout')}}" class="dropdown-item">Log Out</a>
+        <a href="{{route('logout')}}" class="dropdown-item">Güvenli Çıkış</a>
       </div>
     </li>
 
