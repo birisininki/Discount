@@ -1,0 +1,194 @@
+/*responsive*/
+@media only screen and (max-width: 767px) {
+
+    .lottery-time__full-date {
+        display:block
+    }
+    .sidebar-right {
+        display:none
+    }
+    .lottery-area {
+        padding:0px 0px 0px 25px;
+    }
+    .lottery-area .area_title {
+        font-size:24px;
+        font-weight:600;
+    }
+    .lottery-area .form .form__email{
+        width:50%;
+        float:left;
+    }
+    .lottery-area .form .form__button{
+        width:30%;
+        float:left;
+    }
+    .lottery-mobile .lottery-left {
+        padding-left:10px
+    }
+    .how_join .col-3 {
+        width:95%;
+    }
+    .winners-mobile .winner-5{
+        width:93.5%;
+        height:50px;
+    }
+    .profile-tickets-buy {
+        width:98.3%;
+        margin-bottom:25px;
+        float:left
+    }
+    .profile-tickets-buy .text-center {
+        font-size:22px
+    }
+    .profile-tickets-buy .point {
+        font-size:22px
+    }
+    .user-tickets .ticket {
+        width:100%;
+        float:left;
+    }
+    .lottery-col {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 25%;
+      height: 100px;
+      border-right: 2px solid #202020;
+    }
+
+    .lottery-mobile .left-block{
+        padding-right: 7px;
+    }
+    .lottery-mobile .right-block{
+        margin-right: 30px;
+    }
+    .mobile-user-profile .lottery__total-prize__amount{
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .col-3 {
+    width: 95%; 
+    height: 220px; 
+    margin-left: 0.5%;
+    height: 220px; 
+    margin-top:25px;
+    float:left;
+    background-color: #2A292A;
+    border-radius:3px;
+    padding-top:15px;
+    }
+    .lottery-area .form .form__email{
+        margin-left: -10px;
+    }
+    .promotions-mobile .section__header {
+        padding-top: 8px;
+    }
+    .promotions-mobile .btn {
+        margin-right: 15px;
+    }
+    /*footer*/
+    #footer .foot-col-2 {
+        width:100%;
+        height:auto;
+        padding:35px 35px 0px 0px; 
+    }
+    #footer .footer-logo-title{
+        margin-left: 15px;
+    }
+    #footer .footer-logo-list .footer-logo-item {
+    margin-left: 20px;
+    margin-bottom:10px;
+    }
+    #footer .foot-col-2 .footlogo{
+
+    }
+    #footer .foot-col-2 .footlogo img{
+        margin-left: 20%;
+    }
+    #footer .foot-col-2 .footer-social-wrapper{
+        margin-top: 20px;
+        margin-left: 4%; 
+    }
+    #footer .foot-col-2 .footer-social-wrapper .footer-social-item img{
+    width:32px;
+    height:32px;
+    float:left;
+    margin-left:15px;
+    }
+    
+    #footer .footer-nav-list {
+    width:83%;
+    list-style-type: none;
+    margin-top: -42px;
+    }
+    #footer .footer-nav-list .footer-nav-item {
+        text-align: center;
+        border-bottom: 1px solid #fff;
+        height: 40px;
+        padding-top: 26px;
+    }
+    #footer .footer-nav-list .footer-nav-item a{
+        font-size: 18px;
+        font-weight: 500;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #footer .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    #footer .footer-logo-title {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    #footer .footer-logo-list {
+        float: left;
+        list-style-type: none;
+        padding:0px;
+        margin-left: 8%;
+    }
+
+    #footer .footer-logo-list .footer-logo-item {
+        float:left;
+        width:28%;
+        height:auto;
+        margin-bottom:10px
+    }
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+
+}
+
+@media only screen and (min-width: 800px) {
+
+
+}
+
+@media only screen and (min-width: 1550px) {
+
+
+
+}
