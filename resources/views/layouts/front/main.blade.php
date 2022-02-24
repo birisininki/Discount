@@ -8,9 +8,7 @@
             <div class="main-content">
                 <div class="page-inner">
                     @include('layouts.front.games')
-                    @if(session()->has('loggedInUser'))
-                        <a href="{{route('user-logout')}}" class="header-menu__link" style="float:right;">Çıkış Yap</a>
-                    @endif
+                    
                     @yield('content')
                 </div>
             </div>

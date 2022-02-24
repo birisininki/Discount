@@ -15,7 +15,7 @@
 <meta name="geo.a3" content="Betsmove Discount">
 <meta name="og:title" content="Betsmove Discount">
 <meta name="revisit-after" content="1 days"/>
-<link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon" />
+<link rel="shortcut icon" href="{{asset('frontend/assets/images/favicon-16x16.png')}}" type="image/x-icon" />
 <meta name="theme-color" content="#333">
 <meta name="msapplication-navbutton-color" content="#333">
 <meta name="apple-mobile-web-app-status-bar-style" content="#333">
@@ -29,6 +29,7 @@
 <style>
     @import  url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
 
 <link rel="stylesheet" href="{{asset('frontend/assets/fonts/font-awesome/css/font-awesome.css')}}" />
 <link rel="stylesheet" href="{{asset('frontend/assets/style/swiper.min.css')}}" />

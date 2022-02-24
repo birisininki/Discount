@@ -22,8 +22,11 @@
                 <a href="https://www.betsmove{{$domain_number}}.com/tr/live-casino" target="_blank" class="header-menu__link">Canlı Casino</a>
                 <a href="https://www.betsmove{{$domain_number}}.com/tr/promotions" target="_blank" class="header-menu__link">Promosyonlar</a>
                 <a href="{{route('home')}}" class="header-menu__link active">Discount</a>
-                <a href="https://betsmovepiyango3.com" class="header-menu__link">Piyango</a>
-                <a href="https://betsmove122.tv/" target="_blank" class="header-menu__link">Betsmove TV</a>
+                <a href="https://truelink.to/bmpiyango" class="header-menu__link">Piyango</a>
+                <a href="https://betsmove.link/tv" target="_blank" class="header-menu__link">Betsmove TV</a>
+                @if(session()->has('loggedInUser'))
+                    <a href="{{route('user-logout')}}" class="header-menu__link">Çıkış Yap</a>
+                @endif
             </div>
         </div>
     </div>
@@ -52,12 +55,12 @@
             <a href="https://www.betsmove{{$domain_number}}.com/tr/live-casino" target="_blank" class="header-mobile__link">Canli Casino</a>
             <a href="https://www.betsmove{{$domain_number}}.com/tr/promotions" target="_blank" class="header-mobile__link">Promosyonlar</a>
             <a href="{{route('home')}}" class="header-mobile__link active">Discount</a>
-            <a href="https://betsmovepiyango3.com" class="header-mobile__link">Piyango</a>
-            <a href="https://betsmove122.tv/" target="_blank" class="header-mobile__link">Betsmove TV</a>
+            <a href="https://truelink.to/bmpiyango" class="header-mobile__link">Piyango</a>
+            <a href="https://betsmove.link/tv" target="_blank" class="header-mobile__link">Betsmove TV</a>
             
             @if(session()->has('loggedInUser'))
                 <a href="" class="header-menu__link">Kazandıklarım</a>
-                <a href="{{route('user-logout')}}" class="header-menu__link">Çıkış Yap</a>
+                <a href="{{route('user-logout')}}" class="header-mobile__link">Çıkış Yap</a>
             @endif
         </div>
     </div>

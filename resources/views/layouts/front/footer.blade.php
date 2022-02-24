@@ -5,12 +5,12 @@
             <img src="{{asset('frontend/assets/images/icons/logo.svg')}}" alt="Betsmove Logo" class="logo">
         </a>
         <ul class="footer-social-wrapper">
-            <li class="footer-social-item"><a href=""><img alt="Facebook" src="{{asset('frontend/assets/images/footer/social/facebook.png')}}"></a></li>
-            <li class="footer-social-item"><a href=""><img alt="Twitter" src="{{asset('frontend/assets/images/footer/social/twitter.png')}}"></a></li>
-            <li class="footer-social-item"><a href=""><img alt="Instagram" src="{{asset('frontend/assets/images/footer/social/instagram.png')}}"></a></li>
-            <li class="footer-social-item"><a href=""><img alt="TV" src="{{asset('frontend/assets/images/footer/social/tv.png')}}"></a></li>
+            <li class="footer-social-item"><a href="https://www.facebook.com/ositebusite"><img alt="Facebook" src="{{asset('frontend/assets/images/footer/social/facebook.png')}}"></a></li>
+            <li class="footer-social-item"><a href="https://twitter.com/bmovetr"><img alt="Twitter" src="{{asset('frontend/assets/images/footer/social/twitter.png')}}"></a></li>
+            <li class="footer-social-item"><a href="https://www.instagram.com/betsmoveofficial"><img alt="Instagram" src="{{asset('frontend/assets/images/footer/social/instagram.png')}}"></a></li>
+            <li class="footer-social-item"><a href="https://betsmove.link/tv"><img alt="TV" src="{{asset('frontend/assets/images/footer/social/tv.png')}}"></a></li>
             <li class="footer-social-item"><a href=""><img alt="Whatsapp" src="{{asset('frontend/assets/images/footer/social/whatsapp.png')}}"></a></li>
-            <li class="footer-social-item"><a href=""><img alt="Telefon" src="{{asset('frontend/assets/images/footer/social/telegram.png')}}"></a></li>
+            <li class="footer-social-item"><a href="https://t.me/betsmoveonline"><img alt="Telefon" src="{{asset('frontend/assets/images/footer/social/telegram.png')}}"></a></li>
         </ul>
     </div>
     <div class="foot-col-2">
@@ -95,7 +95,7 @@
             </a>
         </div>
         <p class="footer-bottom__powered-by">
-            powered by <a class="footer-bottom__powered-by--light" href="https://www.betsmove{{$domain_number}}.com" target="_blank">betsmove{{$domain_number}}.com</a>
+            powered by <a class="footer-bottom__powered-by--light" href="https://www.betsmove{{$domain_number}}.com" target="_blank">betsmove</a>
         </p>
     </div>
 </div>

@@ -92,6 +92,10 @@
     .promotions-mobile .btn {
         margin-right: 15px;
     }
+    .mobile {
+        min-height: 25px;
+        max-height: 25px; 
+    }
     /*footer*/
     #footer .foot-col-2 {
         width:100%;
