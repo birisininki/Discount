@@ -9,13 +9,13 @@
 <div id="header" class="header navbar-default" style="background: #000;border-bottom:3px solid #ffbc00">
   <!-- begin navbar-header -->
   <div class="navbar-header">
-    <a href="" class="navbar-brand">
+    <a href="#" class="navbar-brand"> 
         <img src="{{asset('admin/assets/img/logo/logo-admin.png')}}" height="23px">
     </a>
     <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+      <span class="icon-bar"></span> 
     </button>
   </div>
   <!-- end navbar-header -->
@@ -25,7 +25,7 @@
 
     <li class="dropdown navbar-user">
       <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-        <img src="{{ asset('admin/assets/img/user/user-13.jpg') }}" alt="" />
+        <img src="{{ asset('admin/assets/img/user/user.png') }}" alt="" />
         <span class="d-none d-md-inline text-white">{{auth()->user()->name}}</span> <b class="caret text-white"></b>
       </a>
       <div class="dropdown-menu dropdown-menu-right">

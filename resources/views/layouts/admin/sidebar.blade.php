@@ -8,16 +8,16 @@
       <li>
 
     <!-- begin sidebar nav -->
-            <ul class="nav">
-                <li class="nav-header">Discount Kontrol Paneli</li>
+            <ul class="nav sidebar-nav">
 
+            <li class="nav-header">Talepler</li>
           <!--module management-->
             <li>
                 <a href="{{route('admin.dashboard')}}">
                 <div class="icon-img">
                     <i class="fa fa-home bg-{{request()->route()->getName() == 'admin.dashboard' ? 'yellow' : 'gradient-blue' }}"></i>
                     </div>
-                    <span>Dashboard</span>
+                    <span>Aktif Talepler</span>
                 </a>
             </li>
             <li>
@@ -38,33 +38,34 @@
                 </a>
             </li>
             @endif
-            @if(auth()->user()->hasPermissionOn('view_employees'))
-            <li>
-                <a href="{{route('admin.employees.list')}}">
-                <div class="icon-img">
-                    <i class="fas fa-id-badge bg-{{request()->route()->getName() == 'admin.employees.list' ? 'yellow' : 'gradient-blue' }}"></i>
-                    </div>
-                    <span>Çalışan Hesapları</span>
-                </a>
-            </li>
-            @endif
-            @if(auth()->user()->hasPermissionOn('view_users'))
-            <li>
-                <a href="{{route('admin.users.list')}}">
-                <div class="icon-img">
-                    <i class="fas fa-users bg-{{request()->route()->getName() == 'admin.users.list' ? 'yellow' : 'gradient-blue' }}"></i>
-                    </div>
-                    <span>Kullanıcılar</span>
-                </a>
-            </li>
-            @endif
             @if(auth()->user()->hasPermissionOn('view_request_types'))
             <li>
                 <a href="{{route('admin.request-types.list')}}">
                 <div class="icon-img">
                     <i class="fas fa-random bg-{{request()->route()->getName() == 'admin.request-types.list' ? 'yellow' : 'gradient-blue' }}"></i>
                     </div>
-                    <span>Talep Türleri</span>
+                    <span>Promosyonlar</span>
+                </a>
+            </li>
+            @endif
+            @if(auth()->user()->hasPermissionOn('view_message_templates'))
+            <li>
+                <a href="{{route('admin.message-templates.list')}}">
+                <div class="icon-img">
+                    <i class="fas fa-envelope bg-{{request()->route()->getName() == 'admin.message-templates.list' ? 'yellow' : 'gradient-blue' }}"></i>
+                    </div>
+                    <span>Promosyon Mesajları</span>
+                </a>
+            </li>
+            @endif
+            <li class="nav-header">Üyeler</li>
+            @if(auth()->user()->hasPermissionOn('view_users'))
+            <li>
+                <a href="{{route('admin.users.list')}}">
+                <div class="icon-img">
+                    <i class="fas fa-users bg-{{request()->route()->getName() == 'admin.users.list' ? 'yellow' : 'gradient-blue' }}"></i>
+                    </div>
+                    <span>Kayıtlı Üyeler</span>
                 </a>
             </li>
             @endif
@@ -78,20 +79,21 @@
               </a>
             </li>
             @endif
-            @if(auth()->user()->hasPermissionOn('view_message_templates'))
+            <li class="nav-header">Personel</li>
+            @if(auth()->user()->hasPermissionOn('view_employees'))
             <li>
-                <a href="{{route('admin.message-templates.list')}}">
+                <a href="{{route('admin.employees.list')}}">
                 <div class="icon-img">
-                    <i class="fas fa-envelope bg-{{request()->route()->getName() == 'admin.message-templates.list' ? 'yellow' : 'gradient-blue' }}"></i>
+                    <i class="fas fa-id-badge bg-{{request()->route()->getName() == 'admin.employees.list' ? 'yellow' : 'gradient-blue' }}"></i>
                     </div>
-                    <span>Mesaj Şablonları</span>
+                    <span>Hesap Yönetimi</span>
                 </a>
             </li>
             @endif
           <!--#module management-->
 
           <!--sidebar routes-->
-          <li class="nav-header"><i class="fa fa-cubes"></i> Version 1.0.0</li>
+          <li class="nav-header"><i class="fa fa-cubes"></i> Version 1.5.3</li>
 
 			        <!-- begin sidebar minify button -->
 					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="ion-ios-arrow-left"></i> <span>Küçült</span></a></li>

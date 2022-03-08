@@ -5,7 +5,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>Betsmove Piyango | Yönetim Paneli Girişi</title>
+	<title>Personel Girişi | Betsmove</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -42,11 +42,7 @@
             <!-- begin brand -->
             <div class="login-header">
                 <div class="brand">
-                    <b>Betsmove</b> Discount
-                    <small>Yönetim paneli girişi</small>
-                </div>
-                <div class="icon">
-                    <i class="fa fa-lock"></i>
+					<img src="{{asset('admin/assets/img/logo/logo.png')}}" height="120px">
                 </div>
             </div>
             <!-- end brand -->
@@ -55,14 +51,14 @@
                 <form action="{{route('login')}}" method="POST" class="margin-bottom-0">
                     @csrf
                     <div class="form-group m-b-20">
-                        <input name="username" type="text" class="form-control form-control-lg" placeholder="Kullanıcı Adı" required />
+                        <input name="username" type="text" class="form-control form-control-lg" placeholder="Kullanıcı Adınız" required />
                     </div>
                     <div class="form-group m-b-20">
-                        <input name="password" type="password" class="form-control form-control-lg" placeholder="Şifre" required />
+                        <input name="password" type="password" class="form-control form-control-lg" placeholder="Şifreniz" required />
                     </div>
 
                     <div class="login-buttons">
-                        <button type="submit" class="btn btn-success btn-block btn-lg">Giriş Yap</button>
+                        <button type="submit" class="btn btn-block btn-lg" style="background:#ffbc00">Giriş Yap</button>
                     </div>
 
                 </form>
@@ -74,13 +70,9 @@
         <ul class="login-bg-list clearfix">
             <li class="active"><a href="javascript:;" data-click="change-bg" data-img="{{asset('admin/assets/img/login-bg/login-bg-17.jpg')}}" style="background-image: url({{asset('admin/assets/img/login-bg/login-bg-17.jpg')}})"></a></li>
             <li><a href="javascript:;" data-click="change-bg" data-img="{{asset('admin/assets/img/login-bg/login-bg-16.jpg')}}" style="background-image: url({{asset('admin/assets/img/login-bg/login-bg-16.jpg')}})"></a></li>
-            <li><a href="javascript:;" data-click="change-bg" data-img="{{asset('admin/assets/img/login-bg/login-bg-15.jpg')}}" style="background-image: url({{asset('admin/assets/img/login-bg/login-bg-15.jpg')}})"></a></li>
-            <li><a href="javascript:;" data-click="change-bg" data-img="{{asset('admin/assets/img/login-bg/login-bg-14.jpg')}}" style="background-image: url({{asset('admin/assets/img/login-bg/login-bg-14.jpg')}})"></a></li>
-            <li><a href="javascript:;" data-click="change-bg" data-img="{{asset('admin/assets/img/login-bg/login-bg-13.jpg')}}" style="background-image: url({{asset('admin/assets/img/login-bg/login-bg-13.jpg')}})"></a></li>
-            <li><a href="javascript:;" data-click="change-bg" data-img="{{asset('admin/assets/img/login-bg/login-bg-12.jpg')}}" style="background-image: url({{asset('admin/assets/img/login-bg/login-bg-12.jpg')}})"></a></li>
         </ul>
         
-	</div>
+	</div> 
 	<!-- end page container -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->

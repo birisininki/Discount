@@ -21,7 +21,7 @@
                 <a href="https://www.betsmove{{$domain_number}}.com/tr/casino" target="_blank" class="header-menu__link">Casino</a>
                 <a href="https://www.betsmove{{$domain_number}}.com/tr/live-casino" target="_blank" class="header-menu__link">Canlı Casino</a>
                 <a href="https://www.betsmove{{$domain_number}}.com/tr/promotions" target="_blank" class="header-menu__link">Promosyonlar</a>
-                <a href="{{route('home')}}" class="header-menu__link active">Discount</a>
+                <a href="{{route('home')}}" class="header-menu__link active active-link">Discount</a> 
                 <a href="https://truelink.to/bmpiyango" class="header-menu__link">Piyango</a>
                 <a href="https://betsmove.link/tv" target="_blank" class="header-menu__link">Betsmove TV</a>
                 @if(session()->has('loggedInUser'))

@@ -32,14 +32,14 @@
         
         </div>
     </section>
-    @foreach($user->active_requests as $active_request)
+    
     <section class="section only-desktop">
-        <h1 class="form_title text-center">
-             Bekleyen Taleplerim</h1>
+        <!--<h1 class="text-center text-white">Bekleyen Taleplerim</h1>-->
+        @foreach($user->active_requests as $active_request)
         <div class="lottery">
             <div class="lottery-col">
                 <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__title">Discount</p>
+                    <p class="lottery__total-prize__title">Discount Talebi</p>
                     <p class="lottery__total-prize__amount">
                         Sıra Numaranız
                     </p>
@@ -51,8 +51,8 @@
                 </div>
             </div>
             <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__amount">
+                <div class="lottery__total-prize lottery-col-inner" style="padding-left:8px">
+                    <p class="lottery__total-prize__amount" style="font-size:14px">
                         {{$active_request->type->name}}
                     </p>
                     <p class="lottery__total-prize__title"> {{$active_request->status == 0 ? 'Talep Beklemede' : 'Talebiniz işleme alındı.'}}</p>
@@ -64,8 +64,10 @@
                 </div>
             </div>
         </div>
+        <br>
+        @endforeach
     </section>
-    @endforeach
+    
     <section class="section only-desktop">
         <div class="requests-area">
             <h1 class="text-center text-white">Geçmiş Taleplerim</h1>
@@ -73,10 +75,10 @@
               <thead>
                 <tr>
                   <th class="text-center">Talep Türü</th>
-                  <th class="text-center">Talep Tarih/Saat</th>
-                  <th class="text-center">Talep Durumu</th>
+                  <th class="text-center" style="min-width:100px">Talep Tarih/Saat</th>
+                  <th class="text-center" style="min-width:100px">Talep Durumu</th>
                   <th class="text-center">Açıklama</th>
-                  <th class="text-center">Onaylanan Miktar</th>
+                  <th class="text-center" style="min-width:140px">Onaylanan Miktar</th>
                 </tr>
               </thead>  
               <tbody>
@@ -85,7 +87,7 @@
                     <tr>
                     <td><b>{{$request->type->name}}</b></td>
                     <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
-                    <td><div class="reguest_alert text-center" style="background: #9c0000;color:#fff;">Ret</div></td>
+                    <td><div class="reguest_alert text-center" style="background: #9c0000;color:#fff;">Red</div></td> 
                     <td>{{$request->message}}</td>
                     <td></td> 
                     </tr> 
@@ -95,7 +97,7 @@
                     <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
                     <td><div class="reguest_alert text-center" style="background: #027a00;color:#fff;">Onay</div></td>
                     <td>{{$request->message}}</td>
-                    <td>{{$request->amount}}</td> 
+                    <td>{{$request->amount}} ₺</td> 
                     </tr>
                     @endif
                 @endforeach
@@ -105,16 +107,19 @@
     </section>  
     @else
     <section class="section only-desktop">
+        
         <div class="form-area">
-            <h1 class="form_title text-center">Discount Talep</h1>
-            <form action="{{route('user-login')}}" method="post">
+            <h1 class="form_title text-center">Discount Talep Et!</h1>
+            <p>Kullanıcı adın ile giriş yap, talep etmek istediğin promosyonu seç ve talebin onaylansın!<p>
+            <form action="{{route('user-login')}}" method="post"> 
                 @csrf
                 <div class="form">
-                    <input type="text" name="username" class="form__email" placeholder="Kullanıcı Adınız">
+                    <input type="text" name="username" class="form__input" placeholder="Kullanıcı Adınız">
                     <button type="submit" class="form__button">Giriş Yap</button>
                 </div>
             </form>
         </div>
+        
     </section> 
     @endif
 @endsection
@@ -177,7 +182,7 @@
               document.getElementById('rules').innerHTML = type.rules;
               document.getElementById('promotion_code').innerHTML = '';
               if(type.code_required){
-                document.getElementById('promotion_code').innerHTML = `<p>Kupon kodunuzu kutucuğa ekleyiniz.</p><input type="text" class="form__input" name="promotion_code" placeholder="Kupon Kodunuzu Yazınız">`;
+                document.getElementById('promotion_code').innerHTML = `<div class="animate__animated animate__slideInUp"><p>Kupon kodunuzu kutucuğa ekleyiniz.</p><input type="text" class="form__input" name="promotion_code" placeholder="Kupon Kodunuzu Yazınız"></div>`;
               }
           })
       </script>
