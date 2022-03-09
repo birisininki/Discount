@@ -1,6 +1,69 @@
 /*responsive*/
 @media only screen and (max-width: 767px) {
 
+    /*login-form*/
+    .login-form .form-area {
+        width:100%;
+        float:left;
+        padding:0px 15px 0px 15px;
+    }
+    .login-form .form__input {
+        float:left;
+        width:60.9%;
+    }
+    .login-form .form__button {
+        float:left;
+        width:24%;
+    }
+    /*promotion-list*/
+    .promotion-list .form-area {
+        padding: 0px;
+    }
+    .promotion-list .form__button {
+        width:31%;
+    }
+    #promotion_code .form__input {
+        width:89%;
+    }
+    table { 
+        width: 100%; 
+        float: left;
+        border-collapse: none; 
+        margin:20px auto;
+        color: #fff; 
+    }
+    th { 
+        background: #ffbc00; 
+        color: #333; 
+        font-weight: bold; 
+    }
+    
+    td, th { 
+        padding: 10px; 
+        border: 1px solid #ccc; 
+        text-align: left; 
+        font-size: 13px;
+    }
+    .reguest_alert {
+        padding: 2px;
+        font-weight: 400;
+        border-radius: 3px;
+        width: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #promotion_code {
+        display: block;
+    }
+    /*promotion-rules*/
+
+    /*request-list*/
+
+    /*history-request*/
+    .history-request {
+
+    }
+
     .lottery-time__full-date {
         display:block
     }

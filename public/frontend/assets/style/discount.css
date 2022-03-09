@@ -121,6 +121,14 @@
     font-size: 18px;
     color: #0F121F;
 }
+.form__inputt {
+    padding: 20px 25px;
+    border-radius: 5px;
+    border: 1px solid #CAD3DB;
+    width: 93%;
+    font-size: 18px;
+    color: #0F121F;
+}
 
 .form__select:focus {
     outline: 1px solid #fdbb11;
@@ -138,12 +146,12 @@
 table { 
     width: 100%; 
     border-collapse: none; 
-    margin:20px auto;
+    margin:5px auto;
     color: #fff; 
 }
 
 tr:nth-of-type(odd) { 
-     
+    
 }
 
 th { 

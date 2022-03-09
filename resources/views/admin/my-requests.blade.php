@@ -24,13 +24,14 @@
                     <th width="1%"></th>
                     <th class="text-nowrap">Kullanıcı Adı</th>
                     <th class="text-nowrap">Kullanıcı Türü</th>
-                    <th class="text-nowrap">Talep Türü</th>
+                    <th class="text-nowrap" style="width:50px">Talep Türü</th>
                     <th class="text-nowrap">Durum</th>
                     <th class="text-nowrap">Miktar</th>
-                    <th class="text-nowrap">Açıklama</th>
+                    
                     <th class="text-nowrap">Talep Tarihi</th>
                     <th class="text-nowrap">Sonuçlanma Tarihi</th>
                     <th class="text-nowrap" data-orderable="false">Tekrar Düzenle</th>
+                    <th class="text-nowrap">Açıklama</th>
                 </tr>
             </thead>
             <tbody id="request_content">
@@ -39,7 +40,7 @@
                     <td width="1%" class="f-s-600 text-inverse">{{$loop->iteration}}</td>
                     <td>{{$request->user->username}}</td>
                     <td>{{$request->user->type->name}}</td>
-                    <td style="background-color:{{$request->type->color}}">{{$request->type->name}}</td>
+                    <td style="background-color:{{$request->type->color}}"><div class="btn btn-default btn-sm">{{$request->type->name}}</div></td>
                     <td>
                         @php
                         switch($request->status){
@@ -56,10 +57,11 @@
                         @endphp
                     </td>
                     <td>{{$request->amount}}</td>
-                    <td>{{$request->message}}</td>
+                    
                     <td>{{$request->created_at->format('d-m-Y H:i')}}</td>
                     <td>{{$request->handle_datetime?->format('d-m-Y H:i')}}</td>
                     <td> <a href="#handle_request" data-toggle="modal" data-backdrop="static" onclick="handle_request({{$request->id}})" type="button" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
+                    <td>{{$request->message}}</td>
                 </tr>
                 @endforeach
             </tbody>
@@ -74,7 +76,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Talebi Değerlendir</h4>
+                    <h4 class="modal-title">Talebi Detayları</h4>
                 </div>
                 <div id="handle_content">
 

@@ -15,7 +15,7 @@
             <li>
                 <a href="{{route('admin.dashboard')}}">
                 <div class="icon-img">
-                    <i class="fa fa-home bg-{{request()->route()->getName() == 'admin.dashboard' ? 'yellow' : 'gradient-blue' }}"></i>
+                    <i class="fa fa-list bg-{{request()->route()->getName() == 'admin.dashboard' ? 'yellow' : 'gradient-blue' }}"></i>
                     </div>
                     <span>Aktif Talepler</span>
                 </a>
@@ -86,7 +86,7 @@
                 <div class="icon-img">
                     <i class="fas fa-id-badge bg-{{request()->route()->getName() == 'admin.employees.list' ? 'yellow' : 'gradient-blue' }}"></i>
                     </div>
-                    <span>Hesap Yönetimi</span>
+                    <span>Çalışan Yönetimi</span>
                 </a>
             </li>
             @endif
