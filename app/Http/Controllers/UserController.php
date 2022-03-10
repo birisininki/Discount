@@ -29,7 +29,7 @@ class UserController extends Controller
     public function logout(){
         session()->forget('loggedInUser');
         return back();
-    } 
+    }
 
     public function login(Request $request){
         $request->validate(['username' => 'required'],['username.required' => 'Kullanıcı adınızı yazınız.']);
@@ -50,7 +50,7 @@ class UserController extends Controller
         }
         $this->log('login', 'User', $user->id, 'User', $user->id, ['ip_address' => $user->ip_address], ['ip_address' => $old->ip_address]);
         session(['loggedInUser' => $user->username]);
-        return back();    
+        return back();
     }
 
     public function index(){
