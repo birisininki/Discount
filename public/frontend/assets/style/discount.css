@@ -1,6 +1,6 @@
 /*default*/
 .sidebar-block .popular-game__list {
-    padding-right:8px
+    padding-right:8px 
 }
 .sidebar-block .x {
     padding-right:8px
@@ -117,7 +117,15 @@
     padding: 20px 25px;
     border-radius: 5px;
     border: 1px solid #CAD3DB;
-    width: 92.8%;
+    width: 62%;
+    font-size: 18px;
+    color: #0F121F;
+}
+.form__inputt {
+    padding: 20px 25px;
+    border-radius: 5px;
+    border: 1px solid #CAD3DB;
+    width: 93%;
     font-size: 18px;
     color: #0F121F;
 }
@@ -138,7 +146,7 @@
 table { 
     width: 100%; 
     border-collapse: none; 
-    margin:20px auto;
+    margin:5px auto;
     color: #fff; 
 }
 
@@ -156,7 +164,7 @@ td, th {
     padding: 10px; 
     border: 1px solid #ccc; 
     text-align: left; 
-    font-size: 18px;
+    font-size: 14px;
 }
 .reguest_alert {
     padding: 5px;
@@ -442,7 +450,7 @@ td, th {
     padding-top: 9px;
     border-bottom: 2px solid #333;
 }
-.ticket-search-form .form-control {
+.ticket-search-form .form-control { 
     float: left;
     width: auto;
     height: 50px;
@@ -454,9 +462,6 @@ td, th {
     width:100%;
     height:auto;
     background: #000;
-}
-#footer .logo{
-    
 }
 #footer .foot-col-2 {
     float:left;

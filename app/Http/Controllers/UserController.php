@@ -29,10 +29,10 @@ class UserController extends Controller
     public function logout(){
         session()->forget('loggedInUser');
         return back();
-    }
+    } 
 
     public function login(Request $request){
-        $request->validate(['username' => 'required'],['username.required' => 'Kullanıcı adı boş olamaz!']);
+        $request->validate(['username' => 'required'],['username.required' => 'Kullanıcı adınızı yazınız.']);
         if(!$user = $this->userRepository->getByUserName($request->username)){
             $user = $this->userRepository->create([
                 'username' => $request->username,

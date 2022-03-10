@@ -95,7 +95,7 @@
             </a>
         </div>
         <p class="footer-bottom__powered-by">
-            powered by <a class="footer-bottom__powered-by--light" href="https://www.betsmove{{$domain_number}}.com" target="_blank">betsmove</a>
+            powered by <a class="footer-bottom__powered-by--light" href="https://www.betsmove{{$domain_number}}.com" target="_blank">betsmove{{$domain_number}}.com</a>
         </p>
     </div>
 </div>

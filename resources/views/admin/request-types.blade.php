@@ -26,25 +26,25 @@
     <!-- end panel-heading -->
     <!-- begin panel-body -->
     <div class="panel-body" style="margin-top:30px;">
-        <table id="data-table-default" class="table table-striped table-bordered">
+        <table id="data-table-defaulttt" class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th width="1%"></th>
                     <th class="text-nowrap">İsim</th>
                     <th class="text-nowrap">Renk</th>
                     <th class="text-nowrap">Kod Gerekli mi?</th>
-                    <th class="text-nowrap">Kurallar</th>
+                    <!--<th class="text-nowrap">Kurallar</th>-->
                     <th class="text-nowrap" data-orderable="false">İşlemler</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($request_types as $type)
                 <tr>
-                    <td width="1%" class="f-s-600 text-inverse">{{$loop->iteration}}</td>
+                    <td width="1%" class="f-s-600 text-inverse"><b>{{$loop->iteration}}</b></td>
                     <td>{{$type->name}}</td>
                     <td><div style="width:100px; height:50px; background-color:{{$type->color}}; border:solid 1px"></div></td>
                     <td>{{$type->code_required ? 'Evet' : 'Hayır'}}</td>
-                    <td>{!! $type->rules !!}</td>
+                    <!--<td>{!! $type->rules !!}</td>-->
                     <td>
                         @if(auth()->user()->hasPermissionOn('update_request_type'))
                         <a href="#update_type" data-toggle="modal" onclick="update_type('{{$type->id}}')" type="button" class="btn btn-warning"><i class="fa fa-edit"></i></a>

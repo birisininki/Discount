@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Http\Controllers;
 
@@ -75,7 +75,7 @@ class RequestController extends Controller
             'status' => 0,
         ])){
             $this->log('create_request', 'Request', $new_request->id, 'User', $request->user_id, $new_request);
-            return back()->with('success', 'Talebinizi sıraya aldık. ');
+            return back()->with('success', 'Talebiniz alındı! Sıra numaranıza göre işleminiz gerçekleşecektir.');
         }else{
             return back()->withErrors('Talep oluştururken bir sorun oluştu. Lütfen tekrar deneyin.');
         }

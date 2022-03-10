@@ -1,0 +1,9 @@
+.sidebar-nav li{
+    border: 1px solid #333
+} 
+.sidebar-nav li span{
+    font-family:BlinkMacSystemFont;
+    font-weight: 600;
+    font-size:13px;
+    color:#f1f1f1;
+} 

@@ -32,12 +32,13 @@
                     <th class="text-nowrap">Talep Türü</th>
                     <th class="text-nowrap">Durum</th>
                     <th class="text-nowrap">Miktar</th>
-                    <th class="text-nowrap">Açıklama</th>
+                    
                     <th class="text-nowrap">Talep Tarihi</th>
                    <!-- <th class="text-nowrap">İşleme Alınma</th>
                     <th class="text-nowrap">Sonuçlanma</th>-->
                     <th class="text-nowrap">İşlem S.</th>
                     <th class="text-nowrap">Toplam S.</th>
+                    <th class="text-nowrap">Açıklama</th>
                 </tr>
             </thead>
             <tbody id="request_content">
@@ -46,7 +47,7 @@
                     <td>{{$request->employee->name}}</td>
                     <td>{{$request->user->username}}</td>
                     <td>{{$request->user->type->name}}</td>
-                    <td style="background-color:{{$request->type->color}}">{{$request->type->name}}</td>
+                    <td style="background-color:{{$request->type->color}}"><div class="btn btn-default btn-sm">{{$request->type->name}}</div></td>
                     <td>
                         @php
                         switch($request->status){
@@ -63,12 +64,13 @@
                         @endphp
                     </td>
                     <td>{{$request->amount}}</td>
-                    <td>{{$request->message}}</td>
+                    
                     <td>{{$request->created_at->format('d-m-Y H:i:s')}}</td>
                     <!--<td>{{$request->process_datetime->format('d-m-Y H:i:s')}}</td>
                     <td>{{$request->handle_datetime?->format('d-m-Y H:i:s')}}</td>-->
                     <td>{{$request->handle_datetime?->diffInHours($request->process_datetime)}}:{{$request->handle_datetime?->diff($request->process_datetime)?->format('%I:%S')}}</td>
                     <td>{{$request->handle_datetime?->diffInHours($request->created_at)}}:{{$request->handle_datetime?->diff($request->created_at)?->format('%I:%S')}}</td>
+                    <td>{{$request->message}}</td>
                 </tr>
                 @endforeach
             </tbody>
