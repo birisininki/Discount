@@ -50,7 +50,7 @@
                     </div>
         
                     <div class="form-group row m-b-15">
-                        <label class="col-md-4 col-sm-4 col-form-label" for="website">Başvuru Türü</label>
+                        <label class="col-md-4 col-sm-4 col-form-label" for="website">Promosyon Türü</label>
                         <div class="col-md-8 col-sm-8">
                             <b>{{$request->type->name}}</b>
                         </div>
@@ -84,16 +84,19 @@
         
                     <div class="form-group row m-b-15">
                         <label class="col-md-4 col-sm-4 col-form-label" for="website">Onay Mesajı</label>
-                        <div class="col-md-2 col-sm-2">
+                        <div class="col-md-4 col-sm-4">
                             <input type="number" class="form-control" name="deposit" placeholder="Yatırım">
                         </div>
-                        <div class="col-md-2 col-sm-2">
+                        <div class="col-md-4 col-sm-4">
                             <input type="number" class="form-control" name="draw" placeholder="Çekim">
                         </div>
-                        <div class="col-md-2 col-sm-2">
+                    </div>
+                    <div class="form-group row m-b-15">
+                        <label class="col-md-4 col-sm-4 col-form-label" for="website">Onay Mesajı</label>
+                        <div class="col-md-4 col-sm-4">
                             <input type="number" class="form-control" name="casino" placeholder="Casino">
                         </div>
-                        <div class="col-md-2 col-sm-2">
+                        <div class="col-md-4 col-sm-4">
                             <input type="number" class="form-control" name="sport" placeholder="Spor">
                         </div>
                     </div>

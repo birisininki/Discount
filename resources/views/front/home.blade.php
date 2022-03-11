@@ -33,8 +33,9 @@
         </div>
     </section>
     
+    <!--
     <section class="section only-desktop">
-        <!--<h1 class="text-center text-white">Bekleyen Taleplerim</h1>-->
+        <h1 class="text-center text-white">Bekleyen Taleplerim</h1>
         @foreach($user->active_requests as $active_request)
         <div class="lottery">
             <div class="lottery-col">
@@ -67,8 +68,10 @@
         <br>
         @endforeach
     </section>
+    -->
+    <!--
     <section class="section only-desktop-down request-list">
-        <!--<h1 class="text-center text-white">Bekleyen Taleplerim</h1>-->
+        <h1 class="text-center text-white">Bekleyen Taleplerim</h1>
         @foreach($user->active_requests as $active_request)
         <div class="lottery">
             <div class="lottery-col"> 
@@ -101,6 +104,7 @@
         <br>
         @endforeach
     </section>
+    -->
     
     <section class="section only-desktop">
         <div class="requests-area">
@@ -192,6 +196,104 @@
         </div>
         
     </section> 
+    <!--
+    <section class="section login-form">
+        
+        <div id="nasilkatilirim" class="lottery-rule-text how_join">
+            <div class="row text-center">
+                <h1 class="sub_title text-white">Promosyonlar</h1>
+                <p>Betsmove'da Talep Edebileceğiniz promosyonlar.</p>
+            </div>
+            <div class="row">
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">DİSCOUNT CASINO</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">DİSCOUNT SPOR</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">ÇEK GEL SPOR</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">ÇEK GEL CASİNO</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">YATIR GEL SPOR</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">YATIR GEL CASİNO</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">ÇEVRİMSİZ %10 COİN BONUSU SPOR</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">ÇEVRİMSİZ %10 COİN BONUSU CASİNO</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">%30 COİN BONUSU SPOR</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">%30 COİN BONUSU CASİNO</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">NBA TMYY İADE TALEBİ</h3>
+                        <p class="">açıklama</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center how-to">
+                    <i class="fa fa-money"></i>
+                    <div class="col-body">
+                        <h3 class="text-center">TMYY İADE TALEBİ</h3>
+                        <p class="">açıklama</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        
+    </section> 
+    -->
     @endif
 @endsection
 
