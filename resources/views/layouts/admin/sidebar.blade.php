@@ -54,12 +54,13 @@
                 <div class="icon-img">
                     <i class="fas fa-envelope bg-{{request()->route()->getName() == 'admin.message-templates.list' ? 'yellow' : 'gradient-blue' }}"></i>
                     </div>
-                    <span>Promosyon Mesajları</span>
+                    <span>Red Mesajları</span>
                 </a>
             </li>
             @endif
-            <li class="nav-header">Üyeler</li>
+            
             @if(auth()->user()->hasPermissionOn('view_users'))
+            <li class="nav-header">Üyeler</li>
             <li>
                 <a href="{{route('admin.users.list')}}">
                 <div class="icon-img">
@@ -79,8 +80,9 @@
               </a>
             </li>
             @endif
-            <li class="nav-header">Personel</li>
+            
             @if(auth()->user()->hasPermissionOn('view_employees'))
+            <li class="nav-header">Personel</li>
             <li>
                 <a href="{{route('admin.employees.list')}}">
                 <div class="icon-img">
