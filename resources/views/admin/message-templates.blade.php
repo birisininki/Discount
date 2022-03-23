@@ -26,16 +26,18 @@
             <thead>
                 <tr>
                     <th width="1%"></th>
-                    <th class="text-nowrap">Talep Türü</th>
-                    <th class="text-nowrap">Mesaj</th>
-                    <th class="text-nowrap" data-orderable="false">İşlemler</th>
+                    <th class="text-nowrap"><i class="fa fa-list"></i> Talep Türü</th>
+                    <th class="text-nowrap"><i class="fa fa-comment"></i> Mesaj Kodu</th>
+                    <th class="text-nowrap"><i class="fa fa-comment"></i> Mesaj</th>
+                    <th class="text-nowrap" data-orderable="false"><i class="fa fa-edit"></i> İşlemler</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> 
                 @foreach($message_templates as $template)
                 <tr>
                     <td width="1%" class="f-s-600 text-inverse">{{$loop->iteration}}</td>
                     <td>{{$template->request_type->name}}</td>
+                    <td>{{$template->message_code}}</td>
                     <td>{{$template->message}}</td>
                     <td>
                         @if(auth()->user()->hasPermissionOn('update_message_template'))

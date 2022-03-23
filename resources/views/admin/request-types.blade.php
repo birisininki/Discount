@@ -30,11 +30,11 @@
             <thead>
                 <tr>
                     <th width="1%"></th>
-                    <th class="text-nowrap">İsim</th>
-                    <th class="text-nowrap">Renk</th>
-                    <th class="text-nowrap">Kod Gerekli mi?</th>
+                    <th class="text-nowrap"><i class="fa fa-list"></i> İsim</th>
+                    <th class="text-nowrap"><i class="fa fa-tint"></i> Renk</th>
+                    <th class="text-nowrap"><i class="fa fa-tag"></i> Kod Gerekli mi?</th>
                     <!--<th class="text-nowrap">Kurallar</th>-->
-                    <th class="text-nowrap" data-orderable="false">İşlemler</th>
+                    <th class="text-nowrap" data-orderable="false"><i class="fa fa-edit"></i> İşlemler</th>
                 </tr>
             </thead>
             <tbody>

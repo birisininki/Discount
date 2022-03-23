@@ -169,7 +169,7 @@ class RequestController extends Controller
                 break;
         }
     }
-
+ 
     public function oldRequests(Request $request){
         if(!auth()->user()->hasPermissionOn('view_old_requests')) return back()->withErrors('Bu sayfayı görüntüleme yetkiniz bulunmamaktadır!');
         

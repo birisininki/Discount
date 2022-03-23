@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class MessageTemplate extends Model
 {
     use SoftDeletes;
-    protected $fillable = ['message', 'request_type_id'];
+    protected $fillable = ['message_code', 'message', 'request_type_id']; 
 
     public function request_type(){
         return $this->belongsTo(RequestType::class);

@@ -30,10 +30,10 @@
             <thead>
                 <tr>
                     <th width="1%"></th>
-                    <th class="text-nowrap">İsim</th>
-                    <th class="text-nowrap">Açıklama</th>
-                    <th class="text-nowrap">Renk</th>
-                    <th class="text-nowrap" data-orderable="false">İşlemler</th>
+                    <th class="text-nowrap"><i class="fa fa-user"></i> Kullanıcı Tipi</th>
+                    <th class="text-nowrap"><i class="fa fa-comment"></i> Açıklama</th>
+                    <th class="text-nowrap"><i class="fa fa-tint"></i> Renk</th>
+                    <th class="text-nowrap" data-orderable="false"><i class="fa fa-edit"></i> İşlemler</th>
                 </tr>
             </thead>
             <tbody>

@@ -1,5 +1,5 @@
 
-<div id="footer">
+<div id="footer" style="background:#000">
     <div class="foot-col-2">
         <a href="https://www.betsmove{{$domain_number}}.com" target="_blank" class="footlogo">
             <img src="{{asset('frontend/assets/images/icons/logo.svg')}}" alt="Betsmove Logo" class="logo">
@@ -30,7 +30,7 @@
             <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/3.webp')}}"></li>
             <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/4.webp')}}"></li>
             <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/5.webp')}}"></li>
-            <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/6.webp')}}"></li>
+            <!--<li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/6.webp')}}"></li>-->
             <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/7.webp')}}"></li>
             <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/8.webp')}}"></li>
             <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/9.webp')}}"></li>
@@ -41,7 +41,7 @@
             <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/14.webp')}}"></li>
             <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/15.webp')}}"></li>
             <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/16.webp')}}"></li>
-            <li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/17.webp')}}"></li>
+            <!--<li class="footer-logo-item"><img src="{{asset('frontend/assets/images/footer/payments/17.webp')}}"></li>-->
         </ul>
     </div>
     <div class="foot-col-2">

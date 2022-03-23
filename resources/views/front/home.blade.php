@@ -33,7 +33,7 @@
         </div>
     </section>
     
-    <!--
+    
     <section class="section only-desktop">
         <h1 class="text-center text-white">Bekleyen Taleplerim</h1>
         @foreach($user->active_requests as $active_request)
@@ -68,8 +68,7 @@
         <br>
         @endforeach
     </section>
-    -->
-    <!--
+    
     <section class="section only-desktop-down request-list">
         <h1 class="text-center text-white">Bekleyen Taleplerim</h1>
         @foreach($user->active_requests as $active_request)
@@ -104,7 +103,7 @@
         <br>
         @endforeach
     </section>
-    -->
+
     
     <section class="section only-desktop">
         <div class="requests-area">
@@ -114,9 +113,10 @@
                 <tr>
                   <th class="text-center">Talep Türü</th>
                   <th class="text-center" style="min-width:100px">Talep Tarih/Saat</th>
-                  <th class="text-center" style="min-width:100px">Talep Durumu</th>
+                  <th class="text-center" style="min-width:100px">Sonuç Tarih/Saat</th>
+                  <th class="text-center" style="min-width:100px">Durum</th>
                   <th class="text-center">Açıklama</th>
-                  <th class="text-center" style="min-width:140px">Onaylanan Miktar</th>
+                  <th class="text-center" style="min-width:140px">Miktar</th>
                 </tr>
               </thead>  
               <tbody>
@@ -124,7 +124,8 @@
                     @if($request->status == 3)
                     <tr>
                     <td><b>{{$request->type->name}}</b></td>
-                    <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
+                    <td>{{$request->created_at?->format('d.m.Y')}}<br>{{$request->created_at?->format('H:i')}}</td>
+                    <td>{{$request->handle_datetime?->format('d.m.Y')}}<br>{{$request->handle_datetime?->format('H:i')}}</td>
                     <td><div class="reguest_alert text-center" style="background: #9c0000;color:#fff;">Red</div></td> 
                     <td>{{$request->message}}</td>
                     <td></td> 
@@ -132,7 +133,8 @@
                     @elseif($request->status == 2)
                     <tr>
                     <td><b>{{$request->type->name}}</b></td>
-                    <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
+                    <td>{{$request->created_at?->format('d.m.Y')}}<br>{{$request->created_at?->format('H:i')}}</td>
+                    <td>{{$request->handle_datetime?->format('d.m.Y')}}<br>{{$request->handle_datetime?->format('H:i')}}</td>
                     <td><div class="reguest_alert text-center" style="background: #027a00;color:#fff;">Onay</div></td>
                     <td>{{$request->message}}</td>
                     <td>{{$request->amount}} ₺</td> 
@@ -150,10 +152,10 @@
               <thead>
                 <tr>
                   <th class="text-center">Talep Türü</th>
-                  <th class="text-center" style="min-width:100px">Tarih/Saat</th>
+                  <th class="text-center" style="min-width:40px">Tarih/Saat</th>
                   <th class="text-center" style="min-width:32px">Durum</th>
                   <th class="text-center">Açıklama</th>
-                  <th class="text-center" style="min-width:100px">Onaylanan Miktar</th>
+                  <th class="text-center" style="min-width:100px">Miktar</th>
                 </tr>
               </thead>  
               <tbody>
@@ -161,7 +163,7 @@
                     @if($request->status == 3)
                     <tr>
                     <td><b>{{$request->type->name}}</b></td>
-                    <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
+                    <td><b>Talep: </b>{{$request->created_at?->format('d.m.Y')}}<br>{{$request->created_at?->format('H:i')}}<br><b>Sonuç: </b>{{$request->handle_datetime?->format('d.m.Y')}}<br>{{$request->handle_datetime?->format('H:i')}}</td>
                     <td><div class="reguest_alert text-center" style="background: #9c0000;color:#fff;">Red</div></td> 
                     <td>{{$request->message}}</td>
                     <td></td> 
@@ -169,7 +171,7 @@
                     @elseif($request->status == 2)
                     <tr>
                     <td><b>{{$request->type->name}}</b></td>
-                    <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
+                    <td><b>Talep: </b>{{$request->created_at?->format('d.m.Y')}}<br>{{$request->created_at?->format('H:i')}}<br><b>Sonuç: </b>{{$request->handle_datetime?->format('d.m.Y')}}<br>{{$request->handle_datetime?->format('H:i')}}</td>
                     <td><div class="reguest_alert text-center" style="background: #027a00;color:#fff;">Onay</div></td>
                     <td>{{$request->message}}</td>
                     <td>{{$request->amount}} ₺</td> 
@@ -196,7 +198,7 @@
         </div>
         
     </section> 
-    <!--
+   
     <section class="section login-form">
         
         <div id="nasilkatilirim" class="lottery-rule-text how_join">
@@ -293,7 +295,7 @@
         </div>
         
     </section> 
-    -->
+
     @endif
 @endsection
 
