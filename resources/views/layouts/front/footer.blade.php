@@ -101,7 +101,7 @@
 </div>
 </div>
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{{asset('frontend/assets/script/swiper.min.js')}}"></script>
 <script src="{{asset('frontend/assets/script/main.js')}}"></script>
 <script type="text/javascript">

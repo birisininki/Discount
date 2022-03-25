@@ -37,8 +37,8 @@
                     <th width="1%"></th>
                     <th class="text-nowrap"><i class="fa fa-user"></i> Kullanıcı Adı</th>
                     <th class="text-nowrap"><i class="fa fa-list"></i> Kullanıcı Türü</th>
-                    <th class="text-nowrap"><i class="fa fa-list-alt"></i> Talep Türü</th>
-                    <th class="text-nowrap"><i class="fa fa-clock"></i> Talep Saati</th>
+                    <th class="text-nowrap"><i class="fa fa-check"></i> Talep Türü</th>
+                    <th class="text-nowrap"><i class="far fa-clock"></i> Talep Saati</th>
                     <th class="text-nowrap" data-orderable="false"><i class="fa fa-edit"></i> İşlemler</th>
                 </tr>
             </thead>

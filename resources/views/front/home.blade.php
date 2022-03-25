@@ -33,75 +33,18 @@
         </div>
     </section>
     
-    
     <section class="section only-desktop">
         <h1 class="text-center text-white">Bekleyen Taleplerim</h1>
-        @foreach($user->active_requests as $active_request)
-        <div class="lottery">
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__title">Discount Talebi</p>
-                    <p class="lottery__total-prize__amount">
-                        Sıra Numaranız
-                    </p>
-                </div> 
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <div class="ticket">{{$active_request->queue}}</div>
-                </div>
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner" style="padding-left:8px">
-                    <p class="lottery__total-prize__amount" style="font-size:14px">
-                        {{$active_request->type->name}}
-                    </p>
-                    <p class="lottery__total-prize__title"> {{$active_request->status == 0 ? 'Talep Beklemede' : 'Talebiniz işleme alındı.'}}</p>
-                </div>
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__subtitle" style="padding-left:15px">Talebiniz gerçekleştirilirken lütfen bekleyiniz...</p>
-                </div>
-            </div>
+        <div id="request_content">
+            @include('front.components.user-table-content-component')
         </div>
-        <br>
-        @endforeach
     </section>
-    
+
     <section class="section only-desktop-down request-list">
         <h1 class="text-center text-white">Bekleyen Taleplerim</h1>
-        @foreach($user->active_requests as $active_request)
-        <div class="lottery">
-            <div class="lottery-col"> 
-                <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__title">Discount Talebi</p> 
-                    <p class="lottery__total-prize__amount">
-                        Sıra Numaranız
-                    </p>
-                </div> 
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <div class="ticket">{{$active_request->queue}}</div>
-                </div>
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner" style="padding-left:8px">
-                    <p class="lottery__total-prize__amount" style="font-size:14px">
-                        {{$active_request->type->name}}
-                    </p>
-                    <p class="lottery__total-prize__title"> {{$active_request->status == 0 ? 'Talep Beklemede' : 'Talebiniz işleme alındı.'}}</p>
-                </div>
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__subtitle" style="padding-left:15px">Talebiniz gerçekleştirilirken lütfen bekleyiniz...</p>
-                </div>
-            </div>
+        <div id="request_content">
+            @include('front.components.user-table-content-component')
         </div>
-        <br>
-        @endforeach
     </section>
 
     
@@ -199,6 +142,7 @@
         
     </section> 
    
+    <!--
     <section class="section login-form">
         
         <div id="nasilkatilirim" class="lottery-rule-text how_join">
@@ -295,6 +239,7 @@
         </div>
         
     </section> 
+    -->
 
     @endif
 @endsection
@@ -342,7 +287,23 @@
                 });
             }
             
-        });          
+        });
+
+        onValue(ref(db, 'discount'), (snapshot) => {
+            //alert("tetikleme başarılı");
+            window.setTimeout(() => {
+                const data = snapshot.val();
+                if(data){
+                let url = "{{route('home-updated-requests')}}";
+                //document.getElementById('handle_content').innerHTML = "<div class='width-full height-md text-center'><h1 style='margin-top:50%;'><i class='fas fa-spinner fa-spin'></i></h1></div>";
+                fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('request_content').innerHTML = data;
+                }).catch(err => console.log(err)); 
+                }
+            }, 200); 
+        });
 
       </script>
 
