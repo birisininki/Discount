@@ -330,7 +330,7 @@
             }).catch(err => console.log(err)); 
             }
         }, 200);
-    });
+    }); 
 
     window.handle_request = function (id){
         set(ref(db, 'discount'), {

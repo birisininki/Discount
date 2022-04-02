@@ -2,7 +2,8 @@
 
 @section('content')
     @if(session()->has('loggedInUser'))
-    <section class="section promotion-list animate__animated animate__slideInUp">
+    <!--<section class="section promotion-list animate__animated animate__slideInUp">-->
+    <section class="section promotion-list">
         <div class="form-area">
             <h1 class="form_title text-center">
                 Promosyonlar</h1>
@@ -23,7 +24,7 @@
             </form>
         </div>
     </section>
-    <section class="section animate__animated animate__shakeY">
+    <section class="section">
         <div class="textbox">
             
             <div class="rules-content" id="rules">
@@ -32,7 +33,7 @@
         
         </div>
     </section>
-    
+
     <section class="section only-desktop">
         <h1 class="text-center text-white">Bekleyen Taleplerim</h1>
         <div id="request_content">
@@ -289,7 +290,7 @@
             
         });
 
-        onValue(ref(db, 'discount'), (snapshot) => {
+        onValue(ref(db, 'userdiscount'), (snapshot) => {
             //alert("tetikleme başarılı");
             window.setTimeout(() => {
                 const data = snapshot.val();
