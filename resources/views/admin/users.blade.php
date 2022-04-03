@@ -25,11 +25,11 @@
             <thead>
                 <tr>
                     <th width="1%"></th>
-                    <th class="text-nowrap">Kullanıcı Adı</th>
-                    <th class="text-nowrap">Kullanıcı IDsi</th>
-                    <th class="text-nowrap">Kullanıcı Türü</th>
-                    <th class="text*nowrap">Engellenme Zamanı/Nedeni</th>
-                    <th class="text-nowrap" data-orderable="false">İşlemler</th>
+                    <th class="text-nowrap"><i class="fa fa-user"></i> Kullanıcı Adı</th>
+                    <th class="text-nowrap"><i class="fa fa-list-ol"></i> Kullanıcı IDsi</th>
+                    <th class="text-nowrap"><i class="fa fa-list"></i> Kullanıcı Türü</th>
+                    <th class="text*nowrap"><i class="fa fa-ban"></i> Engellenme Zamanı/Nedeni</th>
+                    <th class="text-nowrap" data-orderable="false"><i class="fa fa-edit"></i> İşlemler</th>
                 </tr>
             </thead>
             <tbody>

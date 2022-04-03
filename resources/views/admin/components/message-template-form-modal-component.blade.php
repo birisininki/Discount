@@ -3,6 +3,12 @@
     <div class="modal-body">
         <p>
             <div class="form-group row m-b-15">
+                <label class="col-md-4 col-sm-4 col-form-label" for="website">Mesaj Kodu</label>
+                <div class="col-md-8 col-sm-8">
+                    <input class="form-control" type="text" name="message_code" value="{{isset($message_template) ? $message_template->message_code : ''}}" placeholder="Mesaj Kodu Girin" data-parsley-required="true"/>
+                </div>
+            </div>
+            <div class="form-group row m-b-15">
                 <label class="col-md-4 col-sm-4 col-form-label" for="website">Mesaj</label>
                 <div class="col-md-8 col-sm-8">
                     <input class="form-control" type="text" name="message" value="{{isset($message_template) ? $message_template->message : ''}}" placeholder="Mesaj Girin" data-parsley-required="true"/>

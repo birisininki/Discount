@@ -20,8 +20,8 @@
 <meta name="msapplication-navbutton-color" content="#333">
 <meta name="apple-mobile-web-app-status-bar-style" content="#333">
 <meta name="robots" content="all" />
-<meta name="Abstract" content="Bets Move Piyango">
-<meta name="Copyright" content="© Copyright © 2022 Betsmove Piyango">
+<meta name="Abstract" content="Bets Move Discount">
+<meta name="Copyright" content="© Copyright © 2022 Betsmove Discount">
 <meta name="publisher" content="VS 2022" />
 <meta name="refresh" content="90" />
 <meta name="google" content="sitelinkssearchbox" />
@@ -36,4 +36,5 @@
 <link rel="stylesheet" href="{{asset('frontend/assets/style/main.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/assets/style/discount.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/assets/style/responsive.css')}}">
+<meta http-equiv="refresh" content="15; URL={{route('home')}}" />
 <body>

@@ -72,11 +72,11 @@
                     </div>
         
                     <div class="form-group row m-b-15">
-                        <label class="col-md-4 col-sm-4 col-form-label" for="website">Ret Mesajı</label>
+                        <label class="col-md-4 col-sm-4 col-form-label" for="website">Red Mesajı</label>
                         <div class="col-md-8 col-sm-8">
                             <select class="form-control" name="message">
                                 @foreach($request->type->messages as $message)
-                                    <option value="{{$message->message}}">{{$message->message}}</option>
+                                    <option value="{{$message->message_code}}">{{$message->message_code}}</option>
                                 @endforeach
                             </select>
                         </div>

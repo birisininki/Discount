@@ -15,6 +15,7 @@ class CreateMessageTemplatesTable extends Migration
     {
         Schema::create('message_templates', function (Blueprint $table) {
             $table->id();
+            $table->string('message_code');
             $table->string('message');
             $table->foreignId('request_type_id')->constrained('request_types')->onDelete('cascade')->onUpdate('cascade');
             $table->softDeletes();

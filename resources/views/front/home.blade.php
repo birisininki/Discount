@@ -2,7 +2,8 @@
 
 @section('content')
     @if(session()->has('loggedInUser'))
-    <section class="section promotion-list animate__animated animate__slideInUp">
+    <!--<section class="section promotion-list animate__animated animate__slideInUp">-->
+    <section class="section promotion-list">
         <div class="form-area">
             <h1 class="form_title text-center">
                 Promosyonlar</h1>
@@ -23,7 +24,7 @@
             </form>
         </div>
     </section>
-    <section class="section animate__animated animate__shakeY">
+    <section class="section">
         <div class="textbox">
             
             <div class="rules-content" id="rules">
@@ -32,79 +33,21 @@
         
         </div>
     </section>
-    
-    <!--
+
     <section class="section only-desktop">
         <h1 class="text-center text-white">Bekleyen Taleplerim</h1>
-        @foreach($user->active_requests as $active_request)
-        <div class="lottery">
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__title">Discount Talebi</p>
-                    <p class="lottery__total-prize__amount">
-                        Sıra Numaranız
-                    </p>
-                </div> 
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <div class="ticket">{{$active_request->queue}}</div>
-                </div>
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner" style="padding-left:8px">
-                    <p class="lottery__total-prize__amount" style="font-size:14px">
-                        {{$active_request->type->name}}
-                    </p>
-                    <p class="lottery__total-prize__title"> {{$active_request->status == 0 ? 'Talep Beklemede' : 'Talebiniz işleme alındı.'}}</p>
-                </div>
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__subtitle" style="padding-left:15px">Talebiniz gerçekleştirilirken lütfen bekleyiniz...</p>
-                </div>
-            </div>
+        <div id="request_content">
+            @include('front.components.user-table-content-component')
         </div>
-        <br>
-        @endforeach
     </section>
-    -->
-    <!--
+
     <section class="section only-desktop-down request-list">
         <h1 class="text-center text-white">Bekleyen Taleplerim</h1>
-        @foreach($user->active_requests as $active_request)
-        <div class="lottery">
-            <div class="lottery-col"> 
-                <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__title">Discount Talebi</p> 
-                    <p class="lottery__total-prize__amount">
-                        Sıra Numaranız
-                    </p>
-                </div> 
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <div class="ticket">{{$active_request->queue}}</div>
-                </div>
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner" style="padding-left:8px">
-                    <p class="lottery__total-prize__amount" style="font-size:14px">
-                        {{$active_request->type->name}}
-                    </p>
-                    <p class="lottery__total-prize__title"> {{$active_request->status == 0 ? 'Talep Beklemede' : 'Talebiniz işleme alındı.'}}</p>
-                </div>
-            </div>
-            <div class="lottery-col">
-                <div class="lottery__total-prize lottery-col-inner">
-                    <p class="lottery__total-prize__subtitle" style="padding-left:15px">Talebiniz gerçekleştirilirken lütfen bekleyiniz...</p>
-                </div>
-            </div>
+        <div id="request_content">
+            @include('front.components.user-table-content-component')
         </div>
-        <br>
-        @endforeach
     </section>
-    -->
+
     
     <section class="section only-desktop">
         <div class="requests-area">
@@ -114,9 +57,10 @@
                 <tr>
                   <th class="text-center">Talep Türü</th>
                   <th class="text-center" style="min-width:100px">Talep Tarih/Saat</th>
-                  <th class="text-center" style="min-width:100px">Talep Durumu</th>
+                  <th class="text-center" style="min-width:100px">Sonuç Tarih/Saat</th>
+                  <th class="text-center" style="min-width:100px">Durum</th>
                   <th class="text-center">Açıklama</th>
-                  <th class="text-center" style="min-width:140px">Onaylanan Miktar</th>
+                  <th class="text-center" style="min-width:140px">Miktar</th>
                 </tr>
               </thead>  
               <tbody>
@@ -124,7 +68,8 @@
                     @if($request->status == 3)
                     <tr>
                     <td><b>{{$request->type->name}}</b></td>
-                    <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
+                    <td>{{$request->created_at?->format('d.m.Y')}}<br>{{$request->created_at?->format('H:i')}}</td>
+                    <td>{{$request->handle_datetime?->format('d.m.Y')}}<br>{{$request->handle_datetime?->format('H:i')}}</td>
                     <td><div class="reguest_alert text-center" style="background: #9c0000;color:#fff;">Red</div></td> 
                     <td>{{$request->message}}</td>
                     <td></td> 
@@ -132,7 +77,8 @@
                     @elseif($request->status == 2)
                     <tr>
                     <td><b>{{$request->type->name}}</b></td>
-                    <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
+                    <td>{{$request->created_at?->format('d.m.Y')}}<br>{{$request->created_at?->format('H:i')}}</td>
+                    <td>{{$request->handle_datetime?->format('d.m.Y')}}<br>{{$request->handle_datetime?->format('H:i')}}</td>
                     <td><div class="reguest_alert text-center" style="background: #027a00;color:#fff;">Onay</div></td>
                     <td>{{$request->message}}</td>
                     <td>{{$request->amount}} ₺</td> 
@@ -150,10 +96,10 @@
               <thead>
                 <tr>
                   <th class="text-center">Talep Türü</th>
-                  <th class="text-center" style="min-width:100px">Tarih/Saat</th>
+                  <th class="text-center" style="min-width:40px">Tarih/Saat</th>
                   <th class="text-center" style="min-width:32px">Durum</th>
                   <th class="text-center">Açıklama</th>
-                  <th class="text-center" style="min-width:100px">Onaylanan Miktar</th>
+                  <th class="text-center" style="min-width:100px">Miktar</th>
                 </tr>
               </thead>  
               <tbody>
@@ -161,7 +107,7 @@
                     @if($request->status == 3)
                     <tr>
                     <td><b>{{$request->type->name}}</b></td>
-                    <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
+                    <td><b>Talep: </b>{{$request->created_at?->format('d.m.Y')}}<br>{{$request->created_at?->format('H:i')}}<br><b>Sonuç: </b>{{$request->handle_datetime?->format('d.m.Y')}}<br>{{$request->handle_datetime?->format('H:i')}}</td>
                     <td><div class="reguest_alert text-center" style="background: #9c0000;color:#fff;">Red</div></td> 
                     <td>{{$request->message}}</td>
                     <td></td> 
@@ -169,7 +115,7 @@
                     @elseif($request->status == 2)
                     <tr>
                     <td><b>{{$request->type->name}}</b></td>
-                    <td>{{$request->created_at->format('d.m.Y - H:i')}}</td>
+                    <td><b>Talep: </b>{{$request->created_at?->format('d.m.Y')}}<br>{{$request->created_at?->format('H:i')}}<br><b>Sonuç: </b>{{$request->handle_datetime?->format('d.m.Y')}}<br>{{$request->handle_datetime?->format('H:i')}}</td>
                     <td><div class="reguest_alert text-center" style="background: #027a00;color:#fff;">Onay</div></td>
                     <td>{{$request->message}}</td>
                     <td>{{$request->amount}} ₺</td> 
@@ -196,6 +142,7 @@
         </div>
         
     </section> 
+   
     <!--
     <section class="section login-form">
         
@@ -294,6 +241,7 @@
         
     </section> 
     -->
+
     @endif
 @endsection
 
@@ -340,7 +288,23 @@
                 });
             }
             
-        });          
+        });
+
+        onValue(ref(db, 'userdiscount'), (snapshot) => {
+            //alert("tetikleme başarılı");
+            window.setTimeout(() => {
+                const data = snapshot.val();
+                if(data){
+                let url = "{{route('home-updated-requests')}}";
+                //document.getElementById('handle_content').innerHTML = "<div class='width-full height-md text-center'><h1 style='margin-top:50%;'><i class='fas fa-spinner fa-spin'></i></h1></div>";
+                fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('request_content').innerHTML = data;
+                }).catch(err => console.log(err)); 
+                }
+            }, 200); 
+        });
 
       </script>
 

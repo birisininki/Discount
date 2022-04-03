@@ -7,11 +7,17 @@
         </div>
         <div class="header-content">
             <div class="header-auth">
+                <a class="header-auth__btn_block"></a>
+                <div class="header-language">
+                    <img class="header-language__flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/2560px-Flag_of_Turkey.svg.png" alt="">
+                </div>
+                <!--
                 <a class="header-auth__btn sing-up" href="https://www.betsmove{{$domain_number}}.com/tr/register" target="_blank">KAYIT OL</a>
                 <a class="header-auth__btn" href="https://www.betsmove{{$domain_number}}.com/tr/sports/i/#hc=d" target="_blank">GİRİŞ YAP</a>
                 <div class="header-language">
                     <img class="header-language__flag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/2560px-Flag_of_Turkey.svg.png" alt="">
                 </div>
+                -->
             </div>
             <div class="header-menu">
                 <a href="https://www.betsmove{{$domain_number}}.com/tr/sports/i/" target="_blank" class="header-menu__link">Spor Bahisleri</a>
@@ -37,9 +43,14 @@
         <img src="{{asset('frontend/assets/images/icons/logo.svg')}}" alt="Betsmove Logo" class="mobile-logo">
     </div>
     <div class="header-mobile--block">
+        <div class="header-mobile__btn_block"></div>
+    </div>
+    <!--
+    <div class="header-mobile--block">
         <button class="header-mobile__btn" onclick="location.href='https://www.betsmove{{$domain_number}}.com/tr/sports/i/#hc=d'">GİRİŞ YAP</button>
         <button class="header-mobile__btn sing-up" onclick="location.href='https://www.betsmove{{$domain_number}}.com/tr/register'">KAYIT OL</button>
     </div>
+    -->
     <div class="header-mobile--overlay"></div>
     <div class="header-mobile__nav">
         <div class="header-mobile__nav-header">

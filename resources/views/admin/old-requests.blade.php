@@ -26,19 +26,21 @@
         <table id="data-table-{{auth()->user()->hasPermissionOn('export_old_requests') ? 'buttons' : 'default'}}" class="table table-bordered">
             <thead>
                 <tr>
-                    <th class="text-nowrap">Personel</th>
-                    <th class="text-nowrap">K. Adı</th>
-                    <th class="text-nowrap">K. Türü</th>
-                    <th class="text-nowrap">Talep Türü</th>
-                    <th class="text-nowrap">Durum</th>
-                    <th class="text-nowrap">Miktar</th>
+                    <th class="text-nowrap"><i class="fa fa-user"></i> Personel</th>
+                    <th class="text-nowrap"><i class="fa fa-user"></i> K. Adı</th>
+                    <th class="text-nowrap"><i class="fa fa-list"></i> K. Türü</th>
+                    <th class="text-nowrap"><i class="fa fa-list-alt"></i> Talep Türü</th>
+                    <th class="text-nowrap"><i class="fa fa-check"></i> Durum</th>
+                    <th class="text-nowrap"><i class="fa fa-calculator"></i> Miktar</th>
+                    
+                    <th class="text-nowrap"><i class="fa fa-calendar"></i> Talep Tarihi</th>
+                    <th class="text-nowrap"><i class="fa fa-calendar"></i> İşleme Alınma</th>
+                    <th class="text-nowrap"><i class="fa fa-calendar"></i> Sonuçlanma</th>
 
-                    <th class="text-nowrap">Talep Tarihi</th>
-                   <!-- <th class="text-nowrap">İşleme Alınma</th>
-                    <th class="text-nowrap">Sonuçlanma</th>-->
                     <th class="text-nowrap">İşlem S.</th>
                     <th class="text-nowrap">Toplam S.</th>
-                    <th class="text-nowrap">Açıklama</th>
+                    -->
+                    <th class="text-nowrap"><i class="fa fa-edit"></i> Açıklama</th>
                 </tr>
             </thead>
             <tbody id="request_content">
@@ -66,10 +68,12 @@
                     <td>{{$request->amount}}</td>
 
                     <td>{{$request->created_at->format('d-m-Y H:i:s')}}</td>
-                    <!--<td>{{$request->process_datetime->format('d-m-Y H:i:s')}}</td>
-                    <td>{{$request->handle_datetime?->format('d-m-Y H:i:s')}}</td>-->
+                    <td>{{$request->process_datetime->format('d-m-Y H:i:s')}}</td>
+                    <td>{{$request->handle_datetime?->format('d-m-Y H:i:s')}}</td>
+                    <!--
                     <td>{{$request->handle_datetime?->diffInHours($request->process_datetime)}}:{{$request->handle_datetime?->diff($request->process_datetime)?->format('%I:%S')}}</td>
                     <td>{{$request->handle_datetime?->diffInHours($request->created_at)}}:{{$request->handle_datetime?->diff($request->created_at)?->format('%I:%S')}}</td>
+                    -->
                     <td>{{$request->message}}</td>
                 </tr>
                 @endforeach

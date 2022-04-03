@@ -22,16 +22,16 @@
             <thead>
                 <tr>
                     <th width="1%"></th>
-                    <th class="text-nowrap">Kullanıcı Adı</th>
-                    <th class="text-nowrap">Kullanıcı Türü</th>
-                    <th class="text-nowrap" style="width:50px">Talep Türü</th>
-                    <th class="text-nowrap">Durum</th>
-                    <th class="text-nowrap">Miktar</th>
+                    <th class="text-nowrap"><i class="fa fa-user"></i> Kullanıcı Adı</th>
+                    <th class="text-nowrap"><i class="fa fa-list"></i>Kullanıcı Türü</th>
+                    <th class="text-nowrap" style="width:50px"><i class="fa fa-list-alt"></i> Talep Türü</th>
+                    <th class="text-nowrap"><i class="fa fa-check"></i> Durum</th>
+                    <th class="text-nowrap"><i class="fa fa-calculator"></i> Miktar</th>
                     
-                    <th class="text-nowrap">Talep Tarihi</th>
-                    <th class="text-nowrap">Sonuçlanma Tarihi</th>
-                    <th class="text-nowrap" data-orderable="false">Tekrar Düzenle</th>
-                    <th class="text-nowrap">Açıklama</th>
+                    <th class="text-nowrap"><i class="fa fa-calendar"></i> Talep Tarihi</th>
+                    <th class="text-nowrap"><i class="fa fa-calendar"></i> Sonuçlanma Tarihi</th>
+                    <th class="text-nowrap" data-orderable="false"><i class="fa fa-list-alt"></i> Tekrar Düzenle</th>
+                    <th class="text-nowrap"><i class="fa fa-edit"></i> Açıklama</th>
                 </tr>
             </thead>
             <tbody id="request_content">
@@ -61,7 +61,7 @@
                     <td>{{$request->created_at->format('d-m-Y H:i')}}</td>
                     <td>{{$request->handle_datetime?->format('d-m-Y H:i')}}</td>
                     <td> <a href="#handle_request" data-toggle="modal" data-backdrop="static" onclick="handle_request({{$request->id}})" type="button" class="btn btn-success"><i class="fa fa-edit"></i></a></td>
-                    <td>{{$request->message}}</td>
+                    <td>{{$request->message_code}}</td>
                 </tr>
                 @endforeach
             </tbody>
@@ -76,7 +76,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Talebi Detayları</h4>
+                    <h4 class="modal-title">Talep Detayları</h4>
                 </div>
                 <div id="handle_content">
 

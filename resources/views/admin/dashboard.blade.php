@@ -35,11 +35,11 @@
             <thead>
                 <tr>
                     <th width="1%"></th>
-                    <th class="text-nowrap">Kullanıcı Adı</th>
-                    <th class="text-nowrap">Kullanıcı Türü</th>
-                    <th class="text-nowrap">Talep Türü</th>
-                    <th class="text-nowrap">Gelme Saati</th>
-                    <th class="text-nowrap" data-orderable="false">İşlemler</th>
+                    <th class="text-nowrap"><i class="fa fa-user"></i> Kullanıcı Adı</th>
+                    <th class="text-nowrap"><i class="fa fa-list"></i> Kullanıcı Türü</th>
+                    <th class="text-nowrap"><i class="fa fa-check"></i> Talep Türü</th>
+                    <th class="text-nowrap"><i class="far fa-clock"></i> Talep Saati</th>
+                    <th class="text-nowrap" data-orderable="false"><i class="fa fa-edit"></i> İşlemler</th>
                 </tr>
             </thead>
             <tbody id="request_content">
@@ -330,7 +330,7 @@
             }).catch(err => console.log(err)); 
             }
         }, 200);
-    });
+    }); 
 
     window.handle_request = function (id){
         set(ref(db, 'discount'), {

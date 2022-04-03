@@ -37,7 +37,7 @@ class MessageTemplateController extends Controller
     public function create(Request $request){
         if(!auth()->user()->hasPermissionOn('create_message_template')) return back()->withErrors('Bu işlem için yetkiniz bulunmamaktadır!');
 
-        $request->validate(['message' => 'required', 'request_type_id' => 'required']);      
+        $request->validate(['message_code' => 'required', 'message' => 'required', 'request_type_id' => 'required']);      
         if($message_template = $this->messageTemplateRepository->create($request->all())){
             $this->log('create_message_template', 'MessageTemplate', $message_template->id, 'Employee', auth()->id(), $message_template);
             return back()->with('success', 'Mesaj şablonu oluşturuldu');
@@ -57,7 +57,7 @@ class MessageTemplateController extends Controller
     public function update(Request $request){
         if(!auth()->user()->hasPermissionOn('update_message_template')) return back()->withErrors('Bu işlem için yetkiniz bulunmamaktadır!');
 
-        $request->validate(['message' => 'required']);
+        $request->validate(['message_code' => 'required','message' => 'required']);
         $message_template = $this->messageTemplateRepository->getById($request->message_template_id);
         $old_message = $message_template->message;
         if($this->messageTemplateRepository->update($request->all(), $message_template)){

@@ -26,9 +26,9 @@
             <thead>
                 <tr>
                     <th width="1%"></th>
-                    <th class="text-nowrap">İsim</th>
-                    <th class="text-nowrap">Kullanıcı Adı</th>
-                    <th class="text-nowrap" data-orderable="false">İşlemler</th>
+                    <th class="text-nowrap"><i class="fa fa-user"></i> Ad Soyad</th>
+                    <th class="text-nowrap"><i class="fa fa-user"></i> Kullanıcı Adı</th>
+                    <th class="text-nowrap" data-orderable="false"><i class="fa fa-edit"></i> İşlemler</th>
                 </tr>
             </thead>
             <tbody>
