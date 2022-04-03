@@ -6,6 +6,8 @@
 <link href="{{asset('admin/assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css')}}" rel="stylesheet" />
 @endpush
 
+
+
 @section('content')
 <ol class="breadcrumb pull-right">
     <li class="breadcrumb-item">
