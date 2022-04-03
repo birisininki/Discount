@@ -74,11 +74,17 @@
                     <div class="form-group row m-b-15">
                         <label class="col-md-4 col-sm-4 col-form-label" for="website">Red Mesajı</label>
                         <div class="col-md-8 col-sm-8">
+                            <!--
                             <select class="form-control" name="message">
                                 @foreach($request->type->messages as $message)
                                     <option value="{{$message->message_code}}">{{$message->message_code}}</option>
                                 @endforeach
                             </select>
+                            -->
+                            @foreach($request->type->messages as $message)
+                                    <input type="radio" id="{{$message->message_code}}" name="message" value="{{$message->message_code}}">
+                                    <label for="{{$message->message_code}}">{{$message->message_code}}</label>&nbsp;&nbsp;
+                            @endforeach
                         </div>
                     </div>
         

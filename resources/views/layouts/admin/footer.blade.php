@@ -88,6 +88,8 @@
 <script src="{{ asset('admin/assets/js/apps.min.js') }}"></script>
 <!-- ================== END BASE JS ================== -->
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $(document).ready(function() {
@@ -126,6 +128,7 @@
             if(!response.isDismissed) form.submit();
         });
     }
+    $('.kod').selectpicker();
 </script>
 @stack('js')
 @include('sweetalert::alert')

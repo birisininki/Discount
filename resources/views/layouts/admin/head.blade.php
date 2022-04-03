@@ -28,5 +28,7 @@
 	<script src="{{ asset('admin/assets/plugins/pace/pace.min.js') }}"></script>
 	<!-- ================== END BASE JS ================== -->
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
 	@stack('css')
 </head>
