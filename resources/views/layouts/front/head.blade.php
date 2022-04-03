@@ -35,5 +35,6 @@
 <link rel="stylesheet" href="{{asset('frontend/assets/style/swiper.min.css')}}" />
 <link rel="stylesheet" href="{{asset('frontend/assets/style/main.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/assets/style/discount.css')}}">
-<link rel="stylesheet" href="{{asset('frontend/assets/style/responsive.css')}}">  
+<link rel="stylesheet" href="{{asset('frontend/assets/style/responsive.css')}}">
+<meta http-equiv="refresh" content="15; URL={{route('home')}}" />  
 <body>
