@@ -36,7 +36,7 @@
                     <th class="text-nowrap"><i class="fa fa-calendar"></i> Talep Tarihi</th>
                     <th class="text-nowrap"><i class="fa fa-calendar"></i> İşleme Alınma</th>
                     <th class="text-nowrap"><i class="fa fa-calendar"></i> Sonuçlanma</th>
-                    <!--
+
                     <th class="text-nowrap">İşlem S.</th>
                     <th class="text-nowrap">Toplam S.</th>
                     -->
@@ -66,7 +66,7 @@
                         @endphp
                     </td>
                     <td>{{$request->amount}}</td>
-                    
+
                     <td>{{$request->created_at->format('d-m-Y H:i:s')}}</td>
                     <td>{{$request->process_datetime->format('d-m-Y H:i:s')}}</td>
                     <td>{{$request->handle_datetime?->format('d-m-Y H:i:s')}}</td>
@@ -99,7 +99,7 @@
                                 <input class="form-control" type="text" value="{{request()->has('username') ? request()->username : ''}}" name="username" placeholder="Kullanıcı Adı Girin" data-parsley-required="true" />
                             </div>
                         </div>
-  
+
                         <div class="form-group row m-b-15">
                             <label class="col-md-4 col-sm-4 col-form-label" for="fullname">Kullanıcı türüne göre</label>
                             <div class="col-md-8 col-sm-8">
